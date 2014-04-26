@@ -122,26 +122,6 @@ public class ArticleFragment extends Fragment implements OnPreparedListener {
     }
 
 
-    //MENU GOES HERE
-    /***************************************************************/
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu,inflater);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String lifeObjStr = prefs.getString("LO:"+ Constants.currentLifeObject.getEntity(), "No Val");
-
-
-        if (lifeObjStr.equals("No Val")){
-            menu.findItem(R.id.action_bookmark).setIcon(R.drawable.startw);
-        } else {
-            menu.findItem(R.id.action_bookmark).setIcon(R.drawable.starto);
-        }
-
-
-    }
-    /*****************************************************************/
-
 
     public void updateArticleView(int position) {
         if (Constants.lifeObjects!= null && Constants.lifeObjects.size() < position-1){
@@ -624,12 +604,24 @@ public class ArticleFragment extends Fragment implements OnPreparedListener {
         }
     }
 
-    public void showImage(){
-        //Intent intent = new Intent(getActivity(),ShowImageActivity.class);
-        //getActivity().startActivity(intent);
+    //MENU GOES HERE
+    /***************************************************************/
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu,inflater);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String lifeObjStr = prefs.getString("LO:"+ Constants.currentLifeObject.getEntity(), "No Val");
+
+
+        if (lifeObjStr.equals("No Val")){
+            menu.findItem(R.id.action_bookmark).setIcon(R.drawable.startw);
+        } else {
+            menu.findItem(R.id.action_bookmark).setIcon(R.drawable.starto);
+        }
+
     }
-
-
+    /*****************************************************************/
 
 
 }

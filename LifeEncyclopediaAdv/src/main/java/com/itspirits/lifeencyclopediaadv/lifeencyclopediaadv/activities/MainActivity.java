@@ -12,7 +12,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.R;
@@ -27,7 +26,6 @@ import android.view.MenuItem;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -142,7 +140,7 @@ public class MainActivity extends FragmentActivity implements  HeadlinesFragment
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_screen, menu);
+        inflater.inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

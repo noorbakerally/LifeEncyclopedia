@@ -63,21 +63,6 @@ public class HeadlinesFragment extends ListFragment {
 
 
     }
-
-    //MENU GOES HERE
-    /***************************************************************/
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu,inflater);
-        //only the headlines is being shown
-        if (getActivity().findViewById(R.id.fragment_container) != null){
-            menu.findItem(R.id.action_bookmark).setVisible(false);
-        }
-    }
-    /*****************************************************************/
-
-
-
     // Called when the Fragment is visible on the screen
     @Override
     public void onStart() {
@@ -146,4 +131,17 @@ public class HeadlinesFragment extends ListFragment {
         }
 
     }
+    //MENU GOES HERE
+    /***************************************************************/
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu,inflater);
+        //only the headlines is being shown
+        if (getActivity().findViewById(R.id.fragment_container) != null){
+            menu.findItem(R.id.action_bookmark).setVisible(false);
+        }
+    }
+    /*****************************************************************/
+
+
 }

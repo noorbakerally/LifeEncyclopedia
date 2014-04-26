@@ -276,7 +276,12 @@ public class MainScreenActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
+        inflater.inflate(R.menu.menu, menu);
+
+        menu.findItem(R.id.action_search).setVisible(false);
+        menu.findItem(R.id.action_bookmark).setVisible(false);
+        menu.findItem(R.id.action_show_menu).setVisible(false);
+
         return super.onCreateOptionsMenu(menu);
     }
 

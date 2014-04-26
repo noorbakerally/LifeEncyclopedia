@@ -72,7 +72,10 @@ public class BookmarkListActivity extends ListActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.normal, menu);
+        inflater.inflate(R.menu.menu, menu);
+
+        menu.findItem(R.id.action_bookmark).setVisible(false);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -80,26 +83,7 @@ public class BookmarkListActivity extends ListActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         Intent intent;
-        switch (item.getItemId()) {
-            case R.id.action_share:
-                intent = new Intent();
-                intent.setAction(Intent.ACTION_SEND);
-                intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_TEXT, Constants.SHARE_STRING);
-                startActivity(Intent.createChooser(intent, "Share"));
-                return true;
 
-            case R.id.action_show_menu:
-                intent = new Intent(this, MainScreenActivity.class);
-                startActivity(intent);
-                return true;
-
-            case R.id.action_search:
-                Intent searchActivity = new Intent(this,SearchActivity.class);
-                startActivity(searchActivity);
-                return true;
-
-        }
         return false;
     }
 

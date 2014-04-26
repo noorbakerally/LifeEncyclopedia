@@ -273,9 +273,9 @@ public class SearchActivity extends ActionBarActivity {
 
 
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.normal, menu);
-        MenuItem item = menu.findItem(R.id.action_search);
-        item.setVisible(false);
+        inflater.inflate(R.menu.menu, menu);
+        menu.findItem(R.id.action_search).setVisible(false);
+        menu.findItem(R.id.action_bookmark).setVisible(false);
         return super.onCreateOptionsMenu(menu);
     }
 
