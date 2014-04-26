@@ -15,5 +15,7 @@
 	    Commons Attribution License(http://creativecommons.org/licenses/by/1.0#id).This copyright applies to the Wildlife Ontology and accompanying documentation in
 	    RDF, an open Web standard. As per the license, modifications should be published. You can find all changes change to the source files on THIS.</string>
     <string name="title_activity_search">SearchActivity</string>
-
+    <string name="title_activity_bookmark_list">BookmarkListActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="taxonomicRankLabel">Taxonomic Rank: </string>
 </resources>

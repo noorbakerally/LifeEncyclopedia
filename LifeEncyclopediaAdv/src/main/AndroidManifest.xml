@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv" >
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +25,14 @@
         <activity
             android:name="com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.SearchActivity"
             android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name="com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.BookmarkListActivity"
+            android:label="@string/title_activity_bookmark_list" >
+        </activity>
+        <activity
+            android:name="com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.MainActivity"
+            android:label="@string/title_activity_main" >
         </activity>
     </application>
 

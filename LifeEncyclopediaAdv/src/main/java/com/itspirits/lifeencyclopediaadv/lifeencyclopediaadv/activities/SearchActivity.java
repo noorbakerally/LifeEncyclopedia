@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.volley.toolbox.Volley;
+import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.MainScreenActivity;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.R;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.adapters.DirectSubclassArrayAdapter;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.others.Constants;
@@ -305,8 +306,8 @@ public class SearchActivity extends ActionBarActivity {
     @Override
     public void onBackPressed() {
         // TODO Auto-generated method stub
-       // Intent mainActivity = new Intent(this,MainScreenActivity.class);
-        //startActivity(mainActivity);
+        Intent mainActivity = new Intent(this,MainScreenActivity.class);
+        startActivity(mainActivity);
         super.onBackPressed();
     }
 
