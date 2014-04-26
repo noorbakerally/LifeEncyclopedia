@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.itspirits.LifeEncyclopediaAdv.lifeencyclopedia.activities.MainScreenActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <Button
+                        android:id="@+id/btnBrowse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        style="@style/btnStyleBlue"
+                        android:background="@drawable/main_screen_button"
+                        android:text="Start Browsing" />
+
+
+                    <Button
+                        android:id="@+id/btnSearch"
+                        android:layout_alignLeft="@+id/btnBrowse"
+                        android:layout_below="@+id/btnBrowse"
+                        android:layout_marginTop="@dimen/main_screen_button_distance"
+                        style="@style/btnStyleBlue"
+                        android:background="@drawable/main_screen_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search" />
+
+                    <Button
+
+                        android:id="@+id/btnBookmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Bookmarks"
+                        style="@style/btnStyleBlue"
+                        android:layout_alignLeft="@+id/btnSearch"
+                        android:layout_below="@+id/btnSearch"
+                        android:layout_marginTop="@dimen/main_screen_button_distance"
+                        android:background="@drawable/main_screen_button"/>
+
+                    <Button
+                        android:id="@+id/btnGoRandom"
+                        android:text="Go Random"
+                        style="@style/btnStyleBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/btnBookmark"
+                        android:layout_below="@+id/btnBookmark"
+                        android:layout_marginTop="@dimen/main_screen_button_distance"
+                        android:background="@drawable/main_screen_button"/>
+
+                    <Button
+                        android:id="@+id/btnAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About"
+                        style="@style/btnStyleBlue"
+                        android:layout_alignLeft="@+id/btnGoRandom"
+                        android:layout_below="@+id/btnGoRandom"
+                        android:layout_marginTop="@dimen/main_screen_button_distance"
+                        android:background="@drawable/main_screen_button" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView"
+                        android:src="@drawable/main_screen_logo"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+</RelativeLayout>
