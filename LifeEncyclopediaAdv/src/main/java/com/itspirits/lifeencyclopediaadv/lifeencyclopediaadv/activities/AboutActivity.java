@@ -1,31 +1,17 @@
-package com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv;
+package com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.R;
+public class AboutActivity extends ActionBarActivity {
 
-import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.AboutActivity;
-
-public class MainScreenActivity extends ActionBarActivity {
-
-    Button btnAbout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_screen);
+        setContentView(R.layout.activity_about);
 
-        btnAbout = (Button)findViewById(R.id.btnAbout);
-        btnAbout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent aboutActivity = new Intent(getApplicationContext(),AboutActivity.class);
-                startActivity(aboutActivity);
-            }
-        });
     }
 
 
@@ -33,7 +19,7 @@ public class MainScreenActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_screen, menu);
+        getMenuInflater().inflate(R.menu.about, menu);
         return true;
     }
 
@@ -43,6 +29,9 @@ public class MainScreenActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
