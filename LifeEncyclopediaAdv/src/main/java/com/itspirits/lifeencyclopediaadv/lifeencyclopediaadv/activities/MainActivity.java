@@ -13,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.R;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.events.NewRequestEvent;
@@ -31,7 +32,7 @@ import java.util.List;
 
 import de.greenrobot.event.EventBus;
 
-public class MainActivity extends FragmentActivity implements  HeadlinesFragment.OnHeadlineSelectedListener {
+public class MainActivity extends ActionBarActivity implements  HeadlinesFragment.OnHeadlineSelectedListener {
     private ProgressDialog progress;
     SharedPreferences prefs;
     public Menu menu;
