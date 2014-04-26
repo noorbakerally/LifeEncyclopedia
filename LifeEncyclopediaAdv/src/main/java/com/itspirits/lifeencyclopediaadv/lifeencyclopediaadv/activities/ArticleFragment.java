@@ -53,7 +53,7 @@ import java.util.List;
 /**
  * Created by noor on 26/04/14.
  */
-public class ArticleFragment extends ListFragment implements OnPreparedListener {
+public class ArticleFragment extends Fragment implements OnPreparedListener {
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
     private MediaPlayer mediaPlayer;

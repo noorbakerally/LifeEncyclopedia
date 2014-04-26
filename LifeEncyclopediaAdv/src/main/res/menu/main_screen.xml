@@ -1,10 +1,18 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.itspirits.LifeEncyclopediaAdv.lifeencyclopedia.activities.MainScreenActivity" >
-
-    <item android:id="@+id/action_share"
-        android:icon="@drawable/share"
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_show_menu"
+          android:icon="@drawable/menu"
+           app:showAsAction="ifRoom"
+          android:title="Menu"/>
+    <item android:id="@+id/action_bookmark"
+          android:icon="@drawable/startw"
         app:showAsAction="ifRoom"
-        android:title="Share"/>
+          android:title="Bookmark"/>   
+     <item android:id="@+id/action_share"
+	     android:icon="@drawable/share"
+         app:showAsAction="ifRoom"
+	     android:title="Share"/>    
+	 <item android:id="@+id/action_search"
+          android:icon="@drawable/search"
+         app:showAsAction="ifRoom"
+          android:title="Search"/>    
 </menu>

@@ -129,7 +129,7 @@ public class SearchActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,long arg3) {
 
-                /*
+
                 LifeObject lifeObject = (LifeObject) arg0.getAdapter().getItem(position);
                 Constants.lifeObjects.removeAll(Constants.lifeObjects);
 
@@ -139,7 +139,7 @@ public class SearchActivity extends ActionBarActivity {
                 launchBrowser.putExtra(SELECTED_ENTITY_TYPE, lifeObject.getEntity_type());
                 launchBrowser.putExtra(SELECTED_LABEL, lifeObject.getLabel());
                 startActivity(launchBrowser);
-                */
+
             }
         });
 
@@ -270,8 +270,10 @@ public class SearchActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
+
+
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.search, menu);
+        inflater.inflate(R.menu.normal, menu);
         MenuItem item = menu.findItem(R.id.action_search);
         item.setVisible(false);
         return super.onCreateOptionsMenu(menu);
@@ -291,8 +293,8 @@ public class SearchActivity extends ActionBarActivity {
                 return true;
 
             case R.id.action_show_menu:
-                //intent = new Intent(this, MainScreenActivity.class);
-                //startActivity(intent);
+                intent = new Intent(this, MainScreenActivity.class);
+                startActivity(intent);
                 return true;
 
             case R.id.action_search:
