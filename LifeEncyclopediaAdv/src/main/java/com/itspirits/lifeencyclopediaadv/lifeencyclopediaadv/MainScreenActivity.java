@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.AboutActivity;
+import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.SearchActivity;
 
 public class MainScreenActivity extends ActionBarActivity {
 
     Button btnAbout;
+    Button btnSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,15 @@ public class MainScreenActivity extends ActionBarActivity {
             public void onClick(View arg0) {
                 Intent aboutActivity = new Intent(getApplicationContext(),AboutActivity.class);
                 startActivity(aboutActivity);
+            }
+        });
+
+        Button btnSearch = (Button)findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent searchActivity = new Intent(getApplicationContext(),SearchActivity.class);
+                startActivity(searchActivity);
             }
         });
     }

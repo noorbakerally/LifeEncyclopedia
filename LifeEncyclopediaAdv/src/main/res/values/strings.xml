@@ -6,16 +6,14 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_test">Test</string>
     <string name="title_activity_about">AboutActivity</string>
-    <string name="disclaimer">
-	    I developed this application to allow people to easily browse through different life categories and discover new things. All information found
+    <string name="disclaimer">	    I developed this application to allow people to easily browse through different life categories and discover new things. All information found
 	    in this application comes from thousands of source files that were batch processed using scripts I wrote. While the source files from the BBC
 	    Wildlife Ontology Project may be error-free, errors or exceptions may have occured while batch processing these files to extract information.
 	    Therefore, I cannot guarantee that data from this application is fully correct. The user is solely responsible for reviewing and evaluating the
-	    accuracy and relevance of any information received through this application.
-	</string>
-     <string name="source_info">
-	    All data used in this application comes from the BBC Wildlife Ontology project(http://www.bbc.co.uk/ontologies/wo) which is licensed under Creative
+	    accuracy and relevance of any information received through this application.</string>
+    <string name="source_info">	    All data used in this application comes from the BBC Wildlife Ontology project(http://www.bbc.co.uk/ontologies/wo) which is licensed under Creative
 	    Commons Attribution License(http://creativecommons.org/licenses/by/1.0#id).This copyright applies to the Wildlife Ontology and accompanying documentation in
-	    RDF, an open Web standard. As per the license, modifications should be published. You can find all changes change to the source files on THIS.
-	</string>
+	    RDF, an open Web standard. As per the license, modifications should be published. You can find all changes change to the source files on THIS.</string>
+    <string name="title_activity_search">SearchActivity</string>
+
 </resources>

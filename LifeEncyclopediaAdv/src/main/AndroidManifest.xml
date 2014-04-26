@@ -20,6 +20,10 @@
             android:name="com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name="com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
     </application>
 
 </manifest>
