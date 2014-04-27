@@ -14,6 +14,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.R;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.events.NewRequestEvent;
@@ -554,19 +555,27 @@ public class MainActivity extends ActionBarActivity implements  HeadlinesFragmen
         n.setFamilyName(cursor.getString(11));
         n.setGenusName(cursor.getString(12));
 
+
+
+
         n.setImage(cursor.getString(13));
         n.setThumbnail(cursor.getString(14));
         n.setSound(cursor.getString(15));
 
-
+        Log.d("Cranes1:",n.getImage());
 
         String baseURL = "http://ichef.bbci.co.uk/naturelibrary/images/ic/";
         String variable = "/entityName/entityName_1.jpg";
-        variable = variable.replace("entityName", n.getEntity().toLowerCase());
+        variable = variable.replace("entityName", n.getEntity().toLowerCase().replace("(","").replace(")",""));
+
+
         variable = "/"+n.getEntity().substring(0, 1).toLowerCase()+"/"+n.getEntity().substring(0, 2).toLowerCase() +variable;
 
         n.setImage(baseURL+"credit/640x395"+variable);
         n.setThumbnail(baseURL+"149x84"+variable);
+
+        Log.d("Cranes2:",n.getImage());
+
         return n;
     }
 }

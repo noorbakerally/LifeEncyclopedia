@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.MainScreenActivity;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.R;
 
+import android.app.ActionBar;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,14 +24,20 @@ import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.others.Constants;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.others.LifeObject;
 import com.itspirits.lifeencyclopediaadv.lifeencyclopediaadv.activities.HeadlinesFragment.OnHeadlineSelectedListener;
 import android.widget.AdapterView.OnItemClickListener;
-public class BookmarkListActivity extends ListActivity {
+import android.widget.ListView;
+
+public class BookmarkListActivity extends ActionBarActivity {
 
     List <LifeObject> lifeObjects = new ArrayList<LifeObject>();
     OnHeadlineSelectedListener mCallback;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bookmark);
+
         int layout = R.layout.article_row;
+
+        ListView lstBookmarks = (ListView)findViewById(R.id.lstBookmarks);
 
         //getting all bookmarks from the shared preferences
         Map<String,?> keys = PreferenceManager.getDefaultSharedPreferences(this).getAll();
@@ -45,9 +52,9 @@ public class BookmarkListActivity extends ListActivity {
             }
         }
         ArticleArrayAdapter bookmarkAdapter = new ArticleArrayAdapter(this, layout,lifeObjects );
-        setListAdapter(bookmarkAdapter);
+        lstBookmarks.setAdapter(bookmarkAdapter);
 
-        getListView().setOnItemClickListener(new OnItemClickListener() {
+        lstBookmarks.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
@@ -86,7 +93,6 @@ public class BookmarkListActivity extends ListActivity {
 
         return false;
     }
-
-
     /*****************************************************************/
 }
+

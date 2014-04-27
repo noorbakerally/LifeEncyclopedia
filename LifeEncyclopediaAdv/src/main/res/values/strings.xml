@@ -18,4 +18,6 @@
     <string name="title_activity_bookmark_list">Bookmarks</string>
     <string name="title_activity_main">Browse</string>
     <string name="taxonomicRankLabel">Taxonomic Rank: </string>
+    <string name="title_activity_bookmark">BookmarkActivity</string>
+
 </resources>
